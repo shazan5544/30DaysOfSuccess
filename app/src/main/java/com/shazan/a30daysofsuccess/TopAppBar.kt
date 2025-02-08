@@ -18,7 +18,7 @@ fun QuoteTopAppBar(modifier: Modifier = Modifier) {
                 text = stringResource(R.string.app_name),
                 style = MaterialTheme.typography.displayLarge,
 
-            )
+                )
         }
     )
 }

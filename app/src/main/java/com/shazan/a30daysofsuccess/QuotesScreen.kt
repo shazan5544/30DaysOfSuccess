@@ -4,10 +4,9 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
@@ -21,18 +20,23 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import com.shazan.a30daysofsuccess.model.Quote
+import com.shazan.a30daysofsuccess.ui.theme.A30DaysOfSuccessTheme
 
 
 @Composable
 fun QuoteItem(quote: Quote, modifier: Modifier = Modifier) {
     ElevatedCard(
-        modifier = modifier,
+        modifier = modifier.fillMaxWidth(),
         elevation = CardDefaults.cardElevation(dimensionResource(R.dimen.card_elevation)),
         shape = MaterialTheme.shapes.medium,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
-        Column {
+        Column(
+            modifier = modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             DayNumber(
                 quote.dayNumber,
                 modifier = Modifier
@@ -83,16 +87,16 @@ fun QuoteString(@StringRes quote: Int, modifier: Modifier = Modifier) {
     )
 }
 
-//@Preview
-//@Composable
-//private fun QuoteItemPreview() {
-//    A30DaysOfSuccessTheme {
-//        QuoteItem(
-//            Quote(
-//                dayNumber = 1,
-//                imageRes = R.drawable.chess_230416692_o__large_,
-//                quoteRes = R.string.day_1_quote
-//            )
-//        )
-//    }
-//}
+@Preview
+@Composable
+private fun QuoteItemPreview() {
+    A30DaysOfSuccessTheme {
+        QuoteItem(
+            Quote(
+                dayNumber = 1,
+                imageRes = R.drawable.a4russian_ridge_sunset_4652283258_o__large_,
+                quoteRes = R.string.day_4_quote
+            )
+        )
+    }
+}

@@ -9,7 +9,8 @@ import androidx.compose.ui.unit.sp
 import com.shazan.a30daysofsuccess.R
 
 val Display = FontFamily(
-    Font(R.font.piazzolla_18pt_medium, FontWeight.Medium)
+    Font(R.font.piazzolla_18pt_medium, FontWeight.Medium),
+    Font(R.font.cabin_semibold, FontWeight.SemiBold)
 )
 val Body = FontFamily(
     Font(R.font.pavanam_regular, FontWeight.Normal)
@@ -26,7 +27,7 @@ val Typography = Typography(
     ),
     bodyMedium = TextStyle(
         fontFamily = Body,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 15.sp,
         lineHeight = 20.sp,
         letterSpacing = 2.5.sp
