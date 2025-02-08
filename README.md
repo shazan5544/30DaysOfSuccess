@@ -1,2 +1,3 @@
 # Screenshot
-![WhatsApp Image 2025-02-07 at 22 23 22_168c12e0](https://github.com/user-attachments/assets/05ab62f7-1c04-495a-803f-5709f0ee7fc9)
+![Screenshot_1](https://github.com/user-attachments/assets/cb2e7081-7cf1-4f92-aeda-8d8080e01f4c)
+![Screenshot_2](https://github.com/user-attachments/assets/c30df631-6e7c-485d-8562-6ceaa49b2e59)
