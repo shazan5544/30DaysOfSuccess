@@ -13,7 +13,8 @@ val Display = FontFamily(
     Font(R.font.cabin_semibold, FontWeight.SemiBold)
 )
 val Body = FontFamily(
-    Font(R.font.pavanam_regular, FontWeight.Normal)
+    Font(R.font.pavanam_regular, FontWeight.Normal),
+    Font(R.font.cabin_semibold, FontWeight.SemiBold)
 )
 
 // Set of Material typography styles to start with
@@ -41,10 +42,10 @@ val Typography = Typography(
     ),
     displaySmall = TextStyle(
         fontFamily = Display,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 16.sp,
         lineHeight = 20.sp,
-        letterSpacing = 10.sp
+        letterSpacing = 5.sp
     )
 
 )

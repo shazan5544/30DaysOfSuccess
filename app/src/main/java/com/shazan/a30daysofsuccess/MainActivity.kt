@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -47,17 +48,19 @@ fun QuoteApp() {
             items(quotes) { quote ->
                 QuoteItem(
                     quote = quote,
-                    modifier = Modifier.padding(
-                        horizontal = dimensionResource(R.dimen.padding_medium),
-                        vertical = dimensionResource(R.dimen.padding_small)
-                    )
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            horizontal = dimensionResource(R.dimen.padding_medium),
+                            vertical = dimensionResource(R.dimen.padding_small)
+                        )
                 )
             }
         }
     }
 }
 
-//@Preview(showSystemUi = true, device = "spec:width=673dp,height=841dp")
+@Preview(showSystemUi = true, device = "spec:width=673dp,height=841dp")
 @PreviewScreenSizes
 @Composable
 private fun QuoteAppPreview() {

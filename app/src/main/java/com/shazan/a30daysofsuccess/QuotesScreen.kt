@@ -28,7 +28,7 @@ import com.shazan.a30daysofsuccess.ui.theme.A30DaysOfSuccessTheme
 @Composable
 fun QuoteItem(quote: Quote, modifier: Modifier = Modifier) {
     ElevatedCard(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier,
         elevation = CardDefaults.cardElevation(dimensionResource(R.dimen.card_elevation)),
         shape = MaterialTheme.shapes.medium,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
@@ -46,7 +46,6 @@ fun QuoteItem(quote: Quote, modifier: Modifier = Modifier) {
             QuoteImage(
                 quote.imageRes,
                 modifier = modifier
-                    .padding(horizontal = dimensionResource(R.dimen.padding_medium))
                     .clip(MaterialTheme.shapes.small)
                     .height(dimensionResource(R.dimen.image_height)),
             )
